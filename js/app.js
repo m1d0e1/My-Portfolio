@@ -145,7 +145,9 @@ $("body").niceScroll({
 
 //Mixer
 let mixer = mixitup('#projects .row');
-
+$(".buttons button").on("click",function(){
+    $(this).addClass("active").siblings().removeClass("active");
+})
 //WOW
 new WOW().init();
 });
