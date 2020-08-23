@@ -1,0 +1,32 @@
+.main-color,
+.navbar-light .navbar-nav .active>.nav-link,
+.myBtn2:hover,
+.overlay2 button:hover a
+{color:#fb9a1b}
+.main-bg,
+#services .h1::after,
+#projects .h1::after,
+#projects .buttons button:hover,
+#projects .buttons button.active,
+#test .h1::after,
+#contact .h1::after,
+.option svg
+{background-color: #fb9a1b;}
+@media (max-width:991px){
+    .nav-item:hover{padding-left:25px; background-color: #fb9a1b}
+}
+.myImg img:hover {box-shadow: -15px -15px rgba(251, 154, 27,0.8);}
+
+.myBtn2:hover,
+#projects .buttons button,
+.color
+{border:1px solid #fb9a1b}
+
+.education h2
+{border-bottom: 2px solid #fb9a1b;}
+
+#services .col-lg-4:not(:last-of-type){
+    border-right: 1px solid #fb9a1b
+}
+.overlay2{background-color: rgba(251, 154, 27,.9);}
+.text2{border-left: 1px solid #fb9a1b;}
