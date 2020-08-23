@@ -64,6 +64,14 @@ $(".option").on("click",function () {
 //header size
 $("header").innerHeight($(window).innerHeight())
 
+//Animating Skills Section
+$(window).scroll(function(){
+    if($(window).scrollTop()>$(".education").offset().top -100){
+        $(".prog span").addClass("active");
+    } else {
+        $(".prog span").removeClass("active");
+    }
+});
 //Navbar fixed
 $(window).scroll(function(){
     if ($(window).scrollTop() > $(".navbar-light").innerHeight()){
