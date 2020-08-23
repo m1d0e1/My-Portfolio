@@ -308,10 +308,10 @@ header .row .img{margin-top:120px}
 }
 .prog > span{display: inline-block;position: absolute; height: 100%;left:0}
 .prog1 > span {width: 0%; transition: width 1s ease-in-out;}
-.prog2 > span {width: 0%; transition: width 1s ease-in-out;}
-.prog3 > span {width: 0%; transition: width 1s ease-in-out;}
-.prog4 > span {width: 0%; transition: width 1s ease-in-out;}
-.prog5 > span {width: 0%; transition: width 1s ease-in-out;}
+.prog2 > span {width: 0%; transition: width 1s .5s ease-in-out;}
+.prog3 > span {width: 0%; transition: width 1s .7s ease-in-out;}
+.prog4 > span {width: 0%; transition: width 1s .9s ease-in-out;}
+.prog5 > span {width: 0%; transition: width 1s 1.2s ease-in-out;}
 .prog1 > span.active { width: 95%;}
 .prog2 > span.active { width: 93%;}
 .prog3 > span.active { width: 90%;}
