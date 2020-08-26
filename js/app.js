@@ -63,13 +63,14 @@ $(".option").on("click",function () {
   
 //header size
 $("header").innerHeight($(window).innerHeight())
+$("#board").innerHeight($("header").innerHeight())
 
 //Animating Skills Section
 $(window).scroll(function(){
-    if($(window).scrollTop()>$(".education").offset().top -100){
-        $(".prog span").addClass("active");
+    if($(window).scrollTop()>$(".education").offset().top -300){
+        $(".prog span:nth-child(2)").addClass("active");
     } else {
-        $(".prog span").removeClass("active");
+        $(".prog span:nth-child(2)").removeClass("active");
     }
 });
 //Navbar fixed
