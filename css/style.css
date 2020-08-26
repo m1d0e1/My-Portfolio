@@ -173,6 +173,7 @@ body {
     z-index: 5;
     width: 100%;
     transition: all ease-in-out .4s;
+    top:0
 }
 .navbar-light.fixed{
     position: fixed;
@@ -181,8 +182,6 @@ body {
 .navbar-light .navbar-nav .nav-link{
     color: #FFF;
 }
-.navbar-light .navbar-nav .nav-link:hover,.navbar-light .navbar-nav .nav-link:focus
-{color: #fb9a1b;}
 .navbar-light .navbar-brand{color: #FFF;}
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {color: #FFF;}
 
@@ -193,16 +192,10 @@ body {
 }
 
 /***************        Header        *********************/
-
-header{
-    position: relative;
-    background: url("../images/black-laptop-beside-black-computer-mouse-inside-room-669996.jpg") no-repeat center fixed;
-    background-size: cover;
-    min-height: 600px;
-}
-header .row .img{margin-top:120px}
-.text {
-    margin-top:200px;
+header .text{
+    text-align: center;
+    margin: auto;
+    padding-top:200px
 }
 .text h3{
     font-weight: 700;
@@ -217,11 +210,57 @@ header .row .img{margin-top:120px}
     font-weight: 400;
     text-indent: 15px;
     cursor: pointer;
+    margin: 20px auto
 }
 @media (max-width:575px){
     .myBtn{margin: auto}
 }
 
+/****************     Canvas     **************************/
+#board {
+    position: absolute;
+    left: 0; top: 0; bottom: 0; right: 0;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #252934;
+    z-index: -1;
+}
+
+#pt {
+    position: absolute;
+    left: 20px; top: 20px; bottom: 20px; right: 20px;
+    overflow: hidden;
+}
+
+#mobile {
+    position: absolute;
+    bottom: 15px;
+    opacity: .4;
+    display: none;
+    font-size: 1em;
+}
+
+#demoMobile { display: none; }
+
+@media only screen and (max-device-width : 768px) {
+    #pt {
+        display: none;
+    }
+
+    #board {
+        position: absolute; top: 0; left: 0; right: 0; bottom: 50%;
+        background: url("./docs/images/pt/index2.png") no-repeat center center;
+        background-size: cover;
+    }
+
+    #demoDesktop { display: none; }
+    #demoMobile { display: block; }
+
+    p#mobile {
+        display: block;
+        font-size: 2em;
+    }
+}
 /****************     About Section     **************************/
 #about{
     background-color: #131414;
@@ -274,10 +313,11 @@ header .row .img{margin-top:120px}
 }
 /****************    Education     **************************/
 .education{
-    background: url("../images/background-balance-business-commerce-583846.jpg") center fixed no-repeat;
+    padding:50px 0;
+    background: url("../images/800px_COLOURBOX27894694.jpg") no-repeat center fixed;
     background-size: cover;
     position: relative;
-    padding:50px 0;
+    
 }
 .fa-pencil-alt,.fa-layer-group{
     font-size: 33px;
@@ -288,37 +328,44 @@ header .row .img{margin-top:120px}
     padding-bottom: 6px;
 }
 .education h4{font-weight: 700; letter-spacing: 3px;}
-.education .left h6{font-size: 15px;color: #BBB;}
-.education .right h6{margin-bottom: 0; position: relative;}
-.education .right h6::after{
-    content: "95%";
-    position: absolute;
-    right: 10px;
-    font-size: 13px;
-}
-.education .right h6:nth-of-type(2)::after{content: "93%";}
-.education .right h6:nth-of-type(3)::after{content: "90%";}
-.education .right h6:nth-of-type(4)::after{content: "85%";}
-.education .right h6:nth-of-type(5)::after{content: "88%";}
 .prog{
-    background-color: #443F3F;
-    height: 3px;
+    background-color: #565656;
+    height: 25px;
     margin-bottom: 25px;
     position: relative;
+    line-height: 25px;
 }
-.prog > span{display: inline-block;position: absolute; height: 100%;left:0}
-.prog1 > span {width: 0%; transition: width 1s ease-in-out;}
-.prog2 > span {width: 0%; transition: width 1s .5s ease-in-out;}
-.prog3 > span {width: 0%; transition: width 1s .7s ease-in-out;}
-.prog4 > span {width: 0%; transition: width 1s .9s ease-in-out;}
-.prog5 > span {width: 0%; transition: width 1s 1.2s ease-in-out;}
-.prog1 > span.active { width: 95%;}
+.txt{
+    background-color: #07689f; 
+    display: inline-block; 
+    height: 100%; 
+    position:absolute; 
+    z-index: 5;
+    left:0;
+    width: 90px;
+    text-align: center;
+}
+.percent{
+    display: inline-block; 
+    height: 100%; 
+    position:absolute; 
+    z-index: 5;
+    right:0;
+    color:#DDD
+}
+.prog > span:nth-child(2){display: inline-block;position: absolute; height: 100%;left:0}
+.prog1 > span:nth-child(2) {width: 0%; transition: width 1s ease-in-out;}
+.prog2 > span:nth-child(2) {width: 0%; transition: width 1s .5s ease-in-out;}
+.prog3 > span:nth-child(2) {width: 0%; transition: width 1s .7s ease-in-out;}
+.prog4 > span:nth-child(2) {width: 0%; transition: width 1s .9s ease-in-out;}
+.prog5 > span:nth-child(2) {width: 0%; transition: width 1s 1.2s ease-in-out;}
+.prog1 > span.active { width: 94%;}
 .prog2 > span.active { width: 93%;}
 .prog3 > span.active { width: 90%;}
 .prog4 > span.active { width: 85%;}
 .prog5 > span.active { width: 88%;}
 
-@media (max-width:991px){
+@media (max-width:767px){
     .right{margin-top:50px}
 }
 /****************    Services Section     **************************/
@@ -343,35 +390,29 @@ header .row .img{margin-top:120px}
     width: 40%;
 }
 #services .svg-inline--fa{
-    text-align: center;
-    margin: 70px 130px 30px;
-    font-size: 55px;
+    border: 1px solid #DDD;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    line-height: 140px;
+    padding:33px;
+    transition: all .4s ease-in-out;
 }
 
-#services h2{margin-left:98px;font-weight: normal;font-size: 30px;}
+#services .svg-inline--fa:hover{color: #FFF;}
+#services h2{font-weight: normal;font-size: 25px; margin-top: 8px; letter-spacing: 2px;}
 
 @media (max-width:991px){
-    #services .col-lg-4:nth-child(2){border:none}
-    #services .col-lg-4:nth-child(3){
-        text-align: center;
-        margin: 0 auto;
-    }
-    #services .col-lg-4:nth-child(3) h2{ margin-left: 0;}
+    #services .svg-inline--fa{margin-top:35px}
 }
 @media (max-width:767px){
-    #services .col-lg-4{
-        border: none !important;
-        text-align: center;
-        margin: auto auto 40px ;
-    }
-    #services .col-lg-4 h2{ margin-left: 0;}
-    #services .svg-inline--fa{font-size: 48px;}
+    #services .svg-inline--fa{margin-top:40px}
 
 }
 /****************    Statistics     **************************/
 .stat {
     position: relative;
-    background: url("../images/background-balance-business-commerce-583846.jpg") center fixed no-repeat;
+    background: url("../images/Computer-programming-300x200.jpg") center fixed no-repeat;
     background-size: cover;
     padding: 50px 0;
 }
@@ -451,13 +492,13 @@ header .row .img{margin-top:120px}
 /****************     Testimonial      **************************/
 #test {
     padding:50px 0;
-    background: url("../images/a4.jpg") no-repeat center scroll;
+    background: url("../images/Manchester-Testimonial-Background.jpg") no-repeat center fixed;
     background-size: cover;
     position: relative;
     height: 400px;
     z-index: 2;
 }
-#test .overlay{z-index: -1;}
+#test .overlay{z-index: -1;opacity: .7;}
 .fa-comment-alt{font-size: 50px;}
 #test .h1{
     position: relative;
@@ -480,10 +521,16 @@ header .row .img{margin-top:120px}
 .carousel-item h6{font-weight: 500; color:#888; letter-spacing: 1px;}
 /****************    Contact     **************************/
 #contact {
-    padding:50px 0;
     position: relative;
-    background: url("../images/information-sign-on-shelf-251225.jpg") fixed no-repeat center;
-    background-size: cover;
+    background-color: #131414;
+}
+#contact .arrow-down {
+    position: relative;
+    width: 0; 
+    height: 0;
+    border-left: 70% solid transparent;
+    border-right: 72% solid transparent;
+    border-top: 10% solid #fff;
 }
 #contact .h1{
     position: relative;
@@ -492,11 +539,12 @@ header .row .img{margin-top:120px}
     width: 286px;
     margin: 0 auto 60px auto;
     letter-spacing: 3px;
+    padding-top:40px
 }
 #contact .h1::after{
     position: absolute;
     content: "";
-    top: 58px;
+    top: 98px;
     left: 30%;
     height: 2px;
     width: 40%;
@@ -508,6 +556,8 @@ header .row .img{margin-top:120px}
     margin-bottom: 25px;
     padding: 5px 0;
     text-indent: 6px;
+    outline:none;
+    color: #FFF
 }
 #contact .myBtn3 {
     color:#FFF;
@@ -516,25 +566,27 @@ header .row .img{margin-top:120px}
     padding: 7px 22px;
     font-size: 18px;
 }
-.fa-mobile-alt, .fa-map-marker-alt{
-    font-size: 28px;
-    margin-bottom: 30px;
+.icon{margin-bottom: 20px;}
+.email {margin-left:60px}
+.icon .twitter{margin-left:35px}
+.icon .face {margin-left:-20px}
+.icon span{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 25px;
+    border: 1px solid #EEE;
+    border-radius: 50%;
+    margin-right: 10px;
 }
-.fa-envelope{font-size: 25px; margin-bottom: 30px;}
-#contact p, #contact h6,.text2{display: inline-block;}
-.text2{margin-left: 20px; padding-left:20px;}
-.text2 p{font-size: 18px;}
-.text2 h6{font-size: 16px; color: #888;}
-
-@media (min-width: 768px) and (max-width: 991.98px) { 
-    .text2.email{
-        position: relative;
-        top:-55px;
-        left:20px;
-    }
-}
+#contact h6{display: inline-block;}
+.icon h6{font-size: 16px; color: #888; display: inline-block;}
 @media (max-width:767px){
-    #contact .margin-xs{ margin-left:54px}
+    .icon{width:50%; float: left;}
+    .email {margin-left:0px}
+.icon .twitter{margin-left:35px}
+.icon .face {margin-left:-85px}
 }
 
 footer{
