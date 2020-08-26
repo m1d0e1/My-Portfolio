@@ -1,7 +1,9 @@
 .main-color,
 .navbar-light .navbar-nav .active>.nav-link,
 .myBtn2:hover,
-.overlay2 button:hover a
+.overlay2 button:hover a,
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus
 {color:#E41B17}
 .main-bg,
 #services .h1::after,
@@ -10,7 +12,8 @@
 #projects .buttons button.active,
 #test .h1::after,
 #contact .h1::after,
-.option svg
+.option svg,
+#services .svg-inline--fa:hover
 {background-color: #E41B17;}
 @media (max-width:991px){
     .nav-item:hover{padding-left:25px; background-color: #E41B17}
