@@ -565,7 +565,7 @@ header .text{
     .icon h6{display:block !important; margin-top:10px;}
     .icon .twitter{margin-left: 0px}
     .icon .face{margin-left:10px}
-    .svg-inline--fa{line-height:40px}
+    .icon span{line-height:80px}
 }
 
 footer{
