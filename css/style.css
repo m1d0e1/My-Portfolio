@@ -223,7 +223,7 @@ header .text{
     overflow: hidden;
     cursor: pointer;
     background-color: #252934;
-    z-index: -1;
+    z-index: 0;
 }
 
 #pt {
@@ -232,31 +232,7 @@ header .text{
     overflow: hidden;
 }
 
-#mobile {
-    position: absolute;
-    bottom: 15px;
-    opacity: .4;
-    display: none;
-    font-size: 1em;
-}
 
-#demoMobile { display: none; }
-
-@media only screen and (max-device-width : 768px) {
-    #board {
-        position: absolute; top: 0; left: 0; right: 0; bottom: 50%;
-        background: url("./docs/images/pt/index2.png") no-repeat center center;
-        background-size: cover;
-    }
-
-    #demoDesktop { display: none; }
-    #demoMobile { display: block; }
-
-    p#mobile {
-        display: block;
-        font-size: 2em;
-    }
-}
 /****************     About Section     **************************/
 #about{
     background-color: #131414;
