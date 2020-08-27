@@ -243,10 +243,6 @@ header .text{
 #demoMobile { display: none; }
 
 @media only screen and (max-device-width : 768px) {
-    #pt {
-        display: none;
-    }
-
     #board {
         position: absolute; top: 0; left: 0; right: 0; bottom: 50%;
         background: url("./docs/images/pt/index2.png") no-repeat center center;
