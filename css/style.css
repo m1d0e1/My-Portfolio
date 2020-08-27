@@ -560,6 +560,12 @@ header .text{
 .icon .twitter{margin-left:35px}
 .icon .face {margin-left:-85px}
 }
+@media (max-width:500px){
+    .icon{width:50%; float: left;}
+    .icon h6{display:block !important; margin-top:10px;}
+    .icon .twitter{margin-left: 0px}
+    .icon .face{margin-left:10px}
+}
 
 footer{
     background-color: #333;
